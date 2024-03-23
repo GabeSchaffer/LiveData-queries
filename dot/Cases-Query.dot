@@ -1,20 +1,41 @@
 digraph {
-    SURGICAL_CASE [label=SURGICAL_CASE]
-    CODE_VALUE [label=CODE_VALUE]
-    PRSNL [label=PRSNL]
-    PRSNL_GROUP [label=PRSNL_GROUP]
-    ALLERGY [label=ALLERGY]
-    CASE_ATTENDANCE [label=CASE_ATTENDANCE]
-    PERIOPERATIVE_DOCUMENT [label=PERIOPERATIVE_DOCUMENT]
-    SEGMENT_HEADER [label=SEGMENT_HEADER]
-    SURG_CASE_PROCEDURE [label=SURG_CASE_PROCEDURE]
-    ORDER_CATALOG [label=ORDER_CATALOG]
-    PERSON [label=PERSON]
-    CASE_TIMES [label=CASE_TIMES]
-    CLINICAL_EVENT [label=CLINICAL_EVENT]
-    ENCNTR_ALIAS [label=ENCNTR_ALIAS]
-    MM_OMF_ITEM_MASTER [label=MM_OMF_ITEM_MASTER]
-    CASE_CART_PICK_LIST [label=CASE_CART_PICK_LIST]
+    node [shape=box];  // Tables are represented as boxes
+    edge [arrowhead=none];  // Relationships don't have arrowheads
+
+    // Table nodes
+    SURGICAL_CASE [label="SURGICAL_CASE"]
+    CODE_VALUE [label="CODE_VALUE"]
+    PRSNL [label="PRSNL"]
+    PRSNL_GROUP [label="PRSNL_GROUP"]
+    ALLERGY [label="ALLERGY"]
+    CASE_ATTENDANCE [label="CASE_ATTENDANCE"]
+    PERIOPERATIVE_DOCUMENT [label="PERIOPERATIVE_DOCUMENT"]
+    SEGMENT_HEADER [label="SEGMENT_HEADER"]
+    SURG_CASE_PROCEDURE [label="SURG_CASE_PROCEDURE"]
+    ORDER_CATALOG [label="ORDER_CATALOG"]
+    PERSON [label="PERSON"]
+    CASE_TIMES [label="CASE_TIMES"]
+    CLINICAL_EVENT [label="CLINICAL_EVENT"]
+    ENCNTR_ALIAS [label="ENCNTR_ALIAS"]
+    MM_OMF_ITEM_MASTER [label="MM_OMF_ITEM_MASTER"]
+    CASE_CART_PICK_LIST [label="CASE_CART_PICK_LIST"]
+
+    // Attribute nodes for SURGICAL_CASE
+    node [shape=ellipse];  // Attributes are represented as ellipses
+    SC_attr1 [label="attr1"]
+    SC_attr2 [label="attr2"]
+
+    // Attribute nodes for PERSON
+    P_attr1 [label="attr1"]
+    P_attr2 [label="attr2"]
+
+    // Table to attribute relationships
+    SURGICAL_CASE -> SC_attr1
+    SURGICAL_CASE -> SC_attr2
+    PERSON -> P_attr1
+    PERSON -> P_attr2
+
+    // Table relationships
     SURGICAL_CASE -> CODE_VALUE
     SURGICAL_CASE -> PRSNL
     SURGICAL_CASE -> PRSNL_GROUP
