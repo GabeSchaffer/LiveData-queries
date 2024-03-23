@@ -1,0 +1,10 @@
+digraph ERD {
+    node [shape=record, fontname = "Arial"];
+    graph [fontname = "Arial"];
+    edge [fontname = "Arial"];
+
+    PRSNL_GROUP [label="{PRSNL_GROUP|+ PRSNL_GROUP_DESC|+ PRSNL_GROUP_TYPE_CD|+ PRSNL_GROUP_NAME|+ ACTIVE_IND|+ PRSNL_GROUP_ID|...}"];
+    PRSNL_GROUP_RELTN [label="{PRSNL_GROUP_RELTN|+ PERSON_ID|...}"];
+
+    PRSNL_GROUP -> PRSNL_GROUP_RELTN [label="PRSNL_GROUP_ID"];
+}

@@ -1,0 +1,10 @@
+digraph ERD {
+    node [shape=record, fontname = "Arial"];
+    graph [fontname = "Arial"];
+    edge [fontname = "Arial"];
+
+    CODE_VALUE_SET [label="{CODE_VALUE_SET|+ CODE_SET|+ DEFINITION|+ DESCRIPTION|+ DISPLAY|...}"];
+    CODE_VALUE [label="{CODE_VALUE|+ CODE_SET|+ DEFINITION|+ DESCRIPTION|+ COLLATION_SEQ|+ CDF_MEANING|+ CODE_VALUE|+ DISPLAY|+ ACTIVE_IND|...}"];
+
+    CODE_VALUE_SET -> CODE_VALUE [label="includes"];
+}
