@@ -34,7 +34,7 @@ def extract_table_names_and_joins(sql):
 
 if __name__ == '__main__':
     import sys
-    if len(sys.argv) < 2:
+    if len(sys.argv) < 2 or not os.path.exists(sys.argv[1]) or not sys.argv[1].endswith('.sql'):
         print('Usage: python script.py <path to SQL file>')
         sys.exit(1)
 
