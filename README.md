@@ -1,5 +1,5 @@
 # LiveData-queries
-Analysis of SQL queries used for Planner
+Analysis of SQL queries used for LiveData Periop Manager suite
 
 
 1. Based on parameterized queries in `sql/`, use the parse_xml_query.py` script to get a list of tables.
