@@ -1,4 +1,4 @@
-# planner-queries
+# LiveData-queries
 Analysis of SQL queries used for Planner
 
 
